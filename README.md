@@ -50,7 +50,7 @@ Here are some timing comparisons from the different notebooks. Please note that 
 
 The `environment.yml` file has the necessary packages required to run the [laptop.ipynb](laptop.ipynb) and [dask.ipynb](dask.ipynb) notebooks. There are a couple commands necessary after creating the environment to initialize the Dask extension for JupyterLab, and then you can fire up JupyterLab!
 
-```sh
+```bash
 conda env create -f environment.yml
 conda activate dask
 
@@ -64,7 +64,7 @@ jupyter lab
 
 RAPIDS requires a Linux OS and CUDA-enabled GPU. As such the installation will be different depending on your hardware. RAPIDS has a [handy guide here](https://rapids.ai/start.html) that gives you the `conda install` command to run! There is also a JupyterLab [extension for monitoring GPU usage](https://github.com/rapidsai/jupyterlab-nvdashboard) included with RAPIDS, so you can run a command to enable that.
 
-```sh
+```bash
 conda activate dask
 conda install ...  # command from RAPIDS guide
 
@@ -93,7 +93,7 @@ There needs to be two separate Projects for the CPU (Dask) and GPU (RAPIDS) note
 - Size: "T4-XLarge - 4 cores - 16 GB RAM - 1 GPU"
 - Image: "saturncloud/saturn-gpu:\*"
 - Start script:
-    ```
+    ```bash
     conda install -c conda-forge -n base -y jupyterlab-nvdashboard
     jupyter labextension install jupyterlab-nvdashboard
     ```
@@ -101,7 +101,8 @@ There needs to be two separate Projects for the CPU (Dask) and GPU (RAPIDS) note
 Once you start the Jupyter server and jump into JupyterLab, open a new Terminal window to grab the code:
 
 ```bash
-git clone https://github.com/rikturr/high-performance-jupyter /home/jovyan/project
+git clone https://github.com/rikturr/high-performance-jupyter /tmp/high-performance-jupyter
+cp -r /tmp/high-performance-jupyter/* /home/jovyan/project/
 ```
 
 The notebooks will take care of the rest!
