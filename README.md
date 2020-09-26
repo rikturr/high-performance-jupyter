@@ -2,6 +2,8 @@
 
 Code supporting JupyterCon 2020 talk "High performance Jupyter: Faster workloads with Dask and RAPIDS".
 
+Slides are [here](slides.pdf)
+
 # Summary
 
 [Dask](https://dask.org/) is a parallel computing framework that scales from your laptop to a cluster of thousands of machines. [RAPIDS](http://rapids.ai/) is a GPU-computing framework that pushes traditional CPU workloads to the GPU. Dask and RAPIDS together allow you to scale both up and out! There are several notebooks in this repo that progressively tell the story of accelerating Jupyter with these two tools:
