@@ -1,0 +1,15 @@
+name: dask
+channels:
+- defaults
+- conda-forge
+dependencies:
+- dask-labextension
+- dask-ml
+- dask
+- distributed
+- jupyterlab
+- numpy
+- pandas
+- python=3.7
+- s3fs
+- scikit-learn
